@@ -11,7 +11,7 @@ Let's explore some key starting topics in HTML5, along with explanations:
 
 HTML
 
-```
+```HTML
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +28,7 @@ HTML
 -   **`<h1>` to `<h6>`:** Represent headings of different levels. `<h1>` is the most important (main heading), and `<h6>` is the least important. Use them semantically to structure your content.
 
 HTML
-```
+```HTML
 <h1>Main Heading</h1>
 <h2>Subheading</h2>
 <h3>Another Subheading</h3>
@@ -40,7 +40,7 @@ HTML
 -   **`<p>`:** Defines a paragraph of text. Browsers automatically add spacing before and after paragraphs.
 
 HTML
-```
+```HTML
 <p>This is a paragraph of text.  It can be long or short.</p>
 <p>This is another paragraph.</p>
 
@@ -52,7 +52,7 @@ HTML
 -   **`<hr>`:** Represents a thematic break between content, often displayed as a horizontal line.
 
 HTML
-```
+```HTML
 <p>This is a line of text.<br>This is on a new line.</p>
 <hr>
 <p>This is some more text after the horizontal rule.</p>
@@ -66,7 +66,7 @@ HTML
 -   **`<li>` (List Item):** Represents an item within a list.
 
 HTML
-```
+```HTML
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
@@ -84,7 +84,7 @@ HTML
 -   **`<a>`:** Creates a hyperlink to another web page, file, or location within the same page. The `href` attribute specifies the destination URL.
 
 HTML
-```
+```HTML
 <a href="https://www.example.com">Visit Example.com</a>
 <a href="#section2">Go to Section 2</a>  
 ```
@@ -93,7 +93,7 @@ HTML
 
 *   **`<img>`:** Embeds an image in the page. The `src` attribute specifies the image file path.  `alt` provides alternative text for screen readers and if the image cannot be displayed.
 HTML
-```
+```HTML
 <img src="image.jpg" alt="Description of the image">
 
 ```
@@ -110,7 +110,7 @@ HTML5 introduced semantic elements that provide more meaning to the structure of
 -   **`<footer>`:** Represents the footer of a section or page.
 
 HTML
-```
+```HTML
 <article>
   <h2>Article Title</h2>
   <p>Article content...</p>
@@ -133,7 +133,7 @@ HTML
 -   **`<select>`:** Creates a dropdown list.
 
 HTML
-```
+```HTML
 <form>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name"><br><br>
@@ -169,7 +169,7 @@ Okay, continuing the list from 9, here are 8 more essential HTML5 topics:
 -   **`<th>`:** Defines a table header cell.
 -   **`<td>`:** Defines a table data cell. While tables can  be used for layout, it's generally best practice to use CSS for layout and reserve tables for displaying tabular data.
 
-```
+```HTML
     <table>
       <tr>
         <th>Name</th>
@@ -199,7 +199,7 @@ Okay, here are the 20 HTML5 topics with one paragraph explanation and a code exa
 
 HTML
 
-```
+```HTML
 <form>
   <label for="email">Email:</label>
   <input type="email" id="email" name="email" required><br><br>
@@ -214,7 +214,7 @@ HTML
 
 JavaScript
 
-```
+```JAVASCRIPT
 // Store data
 localStorage.setItem('username', 'JohnDoe');
 
@@ -227,7 +227,7 @@ let username = localStorage.getItem('username');
 
 JavaScript
 
-```
+```JAVASCRIPT
 // Store data
 sessionStorage.setItem('product', 'Laptop');
 
@@ -240,7 +240,7 @@ let product = sessionStorage.getItem('product');
 
 JavaScript
 
-```
+```JS
 // In your main script:
 let worker = new Worker('worker.js');
 worker.postMessage({ task: 'longCalculation' });
@@ -260,7 +260,7 @@ onmessage = function(event) {
 
 JavaScript
 
-```
+```JAVASCRIPT
 // Client-side:
 let eventSource = new EventSource('/updates');
 eventSource.onmessage = function(event) {
@@ -287,7 +287,7 @@ app.get('/updates', (req, res) => {
 
 JavaScript
 
-```
+```JAVASCRIPT
 navigator.geolocation.getCurrentPosition(function(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -300,7 +300,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
 HTML
 
-```
+```HTML
 <canvas id="myCanvas" width="200" height="100"></canvas>
 <script>
   let canvas = document.getElementById('myCanvas');
@@ -315,7 +315,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <svg width="100" height="100">
   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
 </svg>
@@ -326,7 +326,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mi>x</mi>
@@ -343,7 +343,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <video controls>
   <source src="video.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -355,7 +355,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <div draggable="true" ondragstart="dragStart(event)">Drag me!</div>
 <div ondrop="drop(event)" ondragover="allowDrop(event)">Drop here</div>
 
@@ -382,7 +382,7 @@ function drop(event) {
 
 JavaScript
 
-```
+```JS
 let socket = new WebSocket('ws://example.com/socketserver');
 
 socket.onopen = function() {
@@ -403,7 +403,7 @@ socket.onmessage = function(event) {
 
 HTML
 
-```
+```HTML
 <div itemscope itemtype="http://schema.org/Product">
   <span itemprop="name">Awesome Widget</span>
   <span itemprop="description">Does amazing things.</span>
@@ -415,7 +415,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <nav role="navigation" aria-label="Main Menu">
   <ul>
     <li><a href="#">Home</a></li>
@@ -429,7 +429,7 @@ HTML
 
 CSS
 
-```
+```CSS
 /* Example media query */
 @media (max-width: 768px) {
   body {
@@ -445,7 +445,7 @@ Okay, here are 10 more HTML5-related terms with code blocks, continuing the numb
 
 HTML
 
-```
+```HTML
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <div class="container">
@@ -458,7 +458,7 @@ HTML
 
 SCSS
 
-```
+```SCSS
 // Example using Sass
 $primary-color: blue;
 
@@ -475,7 +475,7 @@ $primary-color: blue;
 
 JavaScript
 
-```
+```JAVASCRIPT
 // Example (conceptual - Webpack config would be more involved)
 // webpack.config.js
 module.exports = {
@@ -491,7 +491,7 @@ module.exports = {
 
 JavaScript
 
-```
+```JAVASCRIPT
 // Example unit test (using Jest)
 // sum.test.js
 const sum = require('./sum');
@@ -505,7 +505,7 @@ test('adds 1 + 2 to equal 3', () => {
 
 HTML
 
-```
+```HTML
 <article>
   <h1>Blog Post Title</h1>
   <p>Blog post content...</p>
@@ -523,7 +523,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <button aria-label="Close" onclick="closeModal()">X</button>
 
 ```
@@ -532,7 +532,7 @@ HTML
 
 HTML
 
-```
+```HTML
 <title>Best Practices for HTML5 Development</title>
 
 ```
@@ -541,7 +541,7 @@ HTML
 
 HTML
 
-```
+```html
 <img src="image.jpg" srcset="image-small.jpg 300w, image-medium.jpg 600w" alt="Descriptive alt text">
 
 ```
@@ -550,7 +550,7 @@ HTML
 
 JSON
 
-```
+```JSON
 // manifest.json (example)
 {
   "name": "My PWA",
@@ -565,7 +565,7 @@ JSON
 
 HTML
 
-```
+```HTML
 <my-component></my-component>
 
 <script>
