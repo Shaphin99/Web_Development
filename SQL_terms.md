@@ -1,37 +1,4 @@
-### Extended SQL Data Types Comparison Cheat Sheet
 
-Research indicates that MySQL, SQL Server, and PostgreSQL share many core data types for numeric, string, and date/time values, but differ in precision, extensions, and specialized types like spatial or JSON. For instance, all support integers and decimals, yet PostgreSQL offers more flexible arbitrary precision and serial auto-incrementing types, while SQL Server includes monetary types like MONEY. String types are largely equivalent, with variations in Unicode support and large text handling. Date/time types align on basics like DATE and TIMESTAMP, but PostgreSQL adds INTERVAL and time zone-aware variants more robustly. Extended categories include Boolean (native in PostgreSQL, emulated elsewhere), binary/large objects, spatial, JSON/XML, and miscellaneous like UUID or arrays, where PostgreSQL often provides the most built-in options.
-
-This extended version builds on your provided cheat sheet by incorporating additional types from official documentation, ensuring comprehensive coverage while maintaining the structure. It includes new sections for Boolean, Binary, Spatial, JSON/XML, and Miscellaneous types to cover all major categories. Examples use generic SQL syntax for illustration, though actual usage may vary by database; outputs represent typical results.
-
-**Key Extensions and Notes**
-- Added types like MEDIUMINT (MySQL-specific), SERIAL (PostgreSQL auto-increment), DATETIME2 (SQL Server precision), INTERVAL (PostgreSQL time spans), and more.
-- Equivalents are noted where direct matches exist; otherwise, alternatives like (Use INT) are suggested based on common practices.
-- Code examples are in <pre><code class="language-sql"> blocks for theme preservation; for syntax highlighting in HTML, link to a library like Prism.js (not included here for simplicity).
-- For printing, the HTML uses clean tables with borders and monospace fonts for code to ensure readability.
-
-To use, copy the HTML below into a file (e.g., cheatsheet.html) and open in a browser. For full highlighting, add <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"> and <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>.
-
-**Quick HTML Snippet Preview (Numeric Section Only)**
-```html
-<table border="1" style="width:100%; border-collapse: collapse;">
-  <tr><th>Concept</th><th>MySQL</th><th>SQL Server</th><th>PostgreSQL</th><th>Description</th><th>Example Code</th><th>Output</th></tr>
-  <tr><td>Integer</td><td>INT</td><td>INT</td><td>INTEGER</td><td>Whole numbers without decimals. Common for counting or indexing.</td><td><pre><code class="language-sql">SELECT CAST(123 AS INT);</code></pre></td><td>123</td></tr>
-  <!-- Additional rows... -->
-</table>
-```
-
----
-
-The extended SQL Data Types Comparison Cheat Sheet provides a thorough overview of data types across MySQL, SQL Server, and PostgreSQL, drawing from official documentation and comparison resources to ensure accuracy and completeness. This version expands your original by including all major data types, such as specialized ones like spatial and JSON, which are increasingly important in modern applications. The structure retains category-based tables for easy reference, with HTML formatting optimized for printing: tables have borders, fixed widths, and page-break considerations via CSS. Code blocks use <pre><code class="language-sql"> to preserve a "code theme," mimicking syntax highlighting when viewed in a browser with a library like Prism.js. If printing without highlighting, the monospace font ensures code readability.
-
-Key differences highlighted in the extension:
-- **MySQL** emphasizes storage efficiency with types like MEDIUMINT and SET, but lacks native Boolean (uses TINYINT).
-- **SQL Server** focuses on enterprise features like MONEY for currency and GEOGRAPHY for spatial data, with deprecations for older types like TEXT (recommend VARCHAR(MAX)).
-- **PostgreSQL** stands out for extensibility, with native support for arrays, JSONB (binary JSON), UUID, and geometric types, making it ideal for complex data.
-Equivalents are based on functional similarity; for example, PostgreSQL's SERIAL is akin to MySQL's INT with AUTO_INCREMENT, but not identical. Examples are illustrative and use CAST where possible, but real-world syntax may require adjustments (e.g., PostgreSQL prefers :: for casting).
-
-The full HTML is provided below. It includes emojis in headings for visual appeal, as in your original, and is self-contained for direct use.
 
 ```html
 <!DOCTYPE html>
